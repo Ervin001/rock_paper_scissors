@@ -14,7 +14,7 @@ const computerPlay = function () {
 
 //
 function playRound(playerSelection, computerSelection) {
-  console.log(playerSelection, computerSelection);
+  // console.log(playerSelection, computerSelection);
 
   // Var for playerSelection and turned lower case
   const choicePlayer = playerSelection.toLowerCase();
@@ -25,23 +25,23 @@ function playRound(playerSelection, computerSelection) {
   if (choicePlayer === computerSelection) {
     console.log('Its a tie!');
   } else if (choicePlayer === 'scissors' && computerSelection === 'rock') {
-    console.log(`You lose, ${computerSelection} beats ${choicePlayer}`);
+    console.log(`You lose, ${computerSelection} beats ${playerSelection}`);
   } else if (choicePlayer === 'scissors' && computerSelection === 'paper') {
-    console.log(`You win, ${choicePlayer} beats ${computerSelection}`);
+    console.log(`You win, ${playerSelection} beats ${computerSelection}`);
   } else if (choicePlayer === 'rock' && computerSelection === 'scissors') {
-    console.log(`You win, ${choicePlayer} beats ${computerSelection}`);
+    console.log(`You win, ${playerSelection} beats ${computerSelection}`);
   } else if (choicePlayer === 'rock' && computerSelection === 'paper') {
-    console.log(`You lose, ${computerSelection} beats ${choicePlayer}`);
+    console.log(`You lose, ${computerSelection} beats ${playerSelection}`);
   } else if (choicePlayer === 'paper' && computerSelection === 'rock') {
-    console.log(`You win, ${choicePlayer} beats ${computerSelection}`);
+    console.log(`You win, ${playerSelection} beats ${computerSelection}`);
   } else if (choicePlayer === 'paper' && computerSelection === 'scissors') {
-    console.log(`You lose, ${computerSelection} beats ${choicePlayer}`);
+    console.log(`You lose, ${computerSelection} beats ${playerSelection}`);
   }
 }
 
-// playRound('RoCk', computerPlay());
-// playRound('Paper', computerPlay());
-playRound('Scissors', computerPlay());
+playRound('RoCk', computerPlay());
+playRound('Paper', computerPlay());
+playRound('ScisSoRs', computerPlay());
 
 //  When do you win?
 //  scissors > paper;

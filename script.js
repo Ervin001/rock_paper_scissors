@@ -24,10 +24,18 @@ function playRound(playerSelection, computerSelection) {
   // Checks if it's a tie
   if (choicePlayer === computerSelection) {
     console.log('Its a tie!');
-  } else if (choicePlayer === 'scissors' && computerSelection === 'paper') {
-    `you win, ${choicePlayer} beats ${computerSelection}`;
   } else if (choicePlayer === 'scissors' && computerSelection === 'rock') {
-    `You lose, ${computerSelection} beats ${choicePlayer}`;
+    console.log(`You lose, ${computerSelection} beats ${choicePlayer}`);
+  } else if (choicePlayer === 'scissors' && computerSelection === 'paper') {
+    console.log(`You win, ${choicePlayer} beats ${computerSelection}`);
+  } else if (choicePlayer === 'rock' && computerSelection === 'scissors') {
+    console.log(`You win, ${choicePlayer} beats ${computerSelection}`);
+  } else if (choicePlayer === 'rock' && computerSelection === 'paper') {
+    console.log(`You lose, ${computerSelection} beats ${choicePlayer}`);
+  } else if (choicePlayer === 'paper' && computerSelection === 'rock') {
+    console.log(`You win, ${choicePlayer} beats ${computerSelection}`);
+  } else if (choicePlayer === 'paper' && computerSelection === 'scissors') {
+    console.log(`You lose, ${computerSelection} beats ${choicePlayer}`);
   }
 }
 
@@ -35,13 +43,15 @@ function playRound(playerSelection, computerSelection) {
 // playRound('Paper', computerPlay());
 playRound('Scissors', computerPlay());
 
-/* When do you win?
- scissors > paper;
- paper > rock;
- rock > paper;
+//  When do you win?
+//  scissors > paper;
+//  paper > rock;
+//  rock > paper;
 
- if player and comp the same then its a tie,
- if player has scissors and comp has rock: comp wins,
- if player has scissors and comp has paper: player wins,
-
-*/
+//  if player has rock and comp has paper: comp wins,
+//  if player and comp the same then its a tie,
+//  if player has scissors and comp has rock: comp wins,
+//  if player has scissors and comp has paper: player wins,
+//  if player has rock and comp has scissors: player wins.
+//  if player has paper and comp has rock: player wins,
+//  if player has paper and comp scissors: comp wins

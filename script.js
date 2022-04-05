@@ -24,9 +24,24 @@ function playRound(playerSelection, computerSelection) {
   // Checks if it's a tie
   if (choicePlayer === computerSelection) {
     console.log('Its a tie!');
+  } else if (choicePlayer === 'scissors' && computerSelection === 'paper') {
+    `you win, ${choicePlayer} beats ${computerSelection}`;
+  } else if (choicePlayer === 'scissors' && computerSelection === 'rock') {
+    `You lose, ${computerSelection} beats ${choicePlayer}`;
   }
 }
 
 // playRound('RoCk', computerPlay());
-playRound('Paper', computerPlay());
+// playRound('Paper', computerPlay());
 playRound('Scissors', computerPlay());
+
+/* When do you win?
+ scissors > paper;
+ paper > rock;
+ rock > paper;
+
+ if player and comp the same then its a tie,
+ if player has scissors and comp has rock: comp wins,
+ if player has scissors and comp has paper: player wins,
+
+*/

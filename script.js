@@ -19,8 +19,6 @@ function playRound(playerSelection, computerSelection) {
   // Var for playerSelection and turned lower case
   const choicePlayer = playerSelection.toLowerCase();
 
-  // console.log(choicePlayer);
-
   // Checks if it's a tie
   if (choicePlayer === computerSelection) {
     return 'Its a tie!';
@@ -39,10 +37,15 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-const playerSelection = prompt();
-const computerSelection = computerPlay();
+const playerSelection = 'rock';
 
-console.log(playRound(playerSelection, computerSelection));
+// loop to play 5 times
+function game(plays) {
+  for (let i = 0; i < 5; i++) {
+    console.log(playRound(playerSelection, computerPlay()));
+  }
+}
+game();
 
 //  When do you win?
 //  scissors > paper;

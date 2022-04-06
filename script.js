@@ -1,6 +1,6 @@
 'use strict';
 
-// Array that will let the computerPLay function choose an option
+// Array that will let the computerPlay function choose an option
 const typesArr = ['rock', 'paper', 'scissors'];
 
 // Function that determines what the computer will output
@@ -23,25 +23,26 @@ function playRound(playerSelection, computerSelection) {
 
   // Checks if it's a tie
   if (choicePlayer === computerSelection) {
-    console.log('Its a tie!');
+    return 'Its a tie!';
   } else if (choicePlayer === 'scissors' && computerSelection === 'rock') {
-    console.log(`You lose, ${computerSelection} beats ${playerSelection}`);
+    return `You lose, ${computerSelection} beats ${playerSelection}`;
   } else if (choicePlayer === 'scissors' && computerSelection === 'paper') {
-    console.log(`You win, ${playerSelection} beats ${computerSelection}`);
+    return `You win, ${playerSelection} beats ${computerSelection}`;
   } else if (choicePlayer === 'rock' && computerSelection === 'scissors') {
-    console.log(`You win, ${playerSelection} beats ${computerSelection}`);
+    return `You win, ${playerSelection} beats ${computerSelection}`;
   } else if (choicePlayer === 'rock' && computerSelection === 'paper') {
-    console.log(`You lose, ${computerSelection} beats ${playerSelection}`);
+    return `You lose, ${computerSelection} beats ${playerSelection}`;
   } else if (choicePlayer === 'paper' && computerSelection === 'rock') {
-    console.log(`You win, ${playerSelection} beats ${computerSelection}`);
+    return `You win, ${playerSelection} beats ${computerSelection}`;
   } else if (choicePlayer === 'paper' && computerSelection === 'scissors') {
-    console.log(`You lose, ${computerSelection} beats ${playerSelection}`);
+    return `You lose, ${computerSelection} beats ${playerSelection}`;
   }
 }
 
-playRound('RoCk', computerPlay());
-playRound('Paper', computerPlay());
-playRound('ScisSoRs', computerPlay());
+const playerSelection = prompt();
+const computerSelection = computerPlay();
+
+console.log(playRound(playerSelection, computerSelection));
 
 //  When do you win?
 //  scissors > paper;
@@ -53,5 +54,5 @@ playRound('ScisSoRs', computerPlay());
 //  if player has scissors and comp has rock: comp wins,
 //  if player has scissors and comp has paper: player wins,
 //  if player has rock and comp has scissors: player wins.
-//  if player has paper and comp has rock: player wins,
+//  ifx player has paper and comp has rock: player wins,
 //  if player has paper and comp scissors: comp wins

@@ -10,6 +10,42 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  align-self: center;
 
-  padding-top: 10rem;
+  /* padding-top: 10rem; */
+  /* width: 500px; */
+  height: 500px;
+  background-color: #fff5f5;
+}
+
+.main {
+  /* Flexbox properties */
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  /* align-items: center; */
+
+  width: 75%;
+  height: 75%;
+  border: 1px solid #000;
+  border-radius: 8px;
+  background-color: #fa5252;
+  font-size: 48px;
+  color: #f1f3f5;
+}
+
+.left {
+  display: flex;
+  justify-content: center;
+
+  width: 50%;
+  border-right: 0.5px solid #000;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+
+  width: 50%;
+  border-left: 0.5px solid #000;
 }

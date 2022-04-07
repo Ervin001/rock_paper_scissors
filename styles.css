@@ -5,6 +5,7 @@
 }
 
 .container {
+  height: 100vh;
   /* Flexbox properties*/
   display: flex;
   flex-direction: column;
@@ -14,7 +15,7 @@
 
   /* padding-top: 10rem; */
   /* width: 500px; */
-  height: 500px;
+  /* height: 500px; */
   background-color: #fff5f5;
 }
 
@@ -22,30 +23,58 @@
   /* Flexbox properties */
   display: flex;
   flex-direction: row;
+
   /* justify-content: center; */
   /* align-items: center; */
 
   width: 75%;
-  height: 75%;
+  height: 65%;
   border: 1px solid #000;
-  border-radius: 8px;
+  border-radius: 10px;
   background-color: #fa5252;
   font-size: 48px;
-  color: #f1f3f5;
+  color: aqua;
 }
 
 .left {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
   width: 50%;
   border-right: 0.5px solid #000;
+  padding-top: 10px;
 }
 
 .right {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1 0 auto;
 
   width: 50%;
-  border-left: 0.5px solid #000;
+  border-right: 0.5px solid #000;
+  padding-top: 10px;
+  border-right: 10px;
+}
+
+.score {
+  margin-top: 20px;
+  font-size: 70px;
+}
+
+.btn {
+  border-radius: 2em;
+
+  padding: 0.5em 1.2em;
+  margin: 0.9em 2em;
+
+  color: #fa5252;
+  background-color: aqua;
+  border: 1px solid #000;
+}
+
+.reset-button-div {
+  display: flex;
+  align-items: center;
 }

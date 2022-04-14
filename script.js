@@ -38,24 +38,3 @@ function playRound(playerSelection, computerSelection) {
 }
 
 const playerSelection = 'rock';
-
-// loop to play 5 times
-function game(plays) {
-  for (let i = 0; i < 5; i++) {
-    console.log(playRound(playerSelection, computerPlay()));
-  }
-}
-game();
-
-//  When do you win?
-//  scissors > paper;
-//  paper > rock;
-//  rock > paper;
-
-//  if player has rock and comp has paper: comp wins,
-//  if player and comp the same then its a tie,
-//  if player has scissors and comp has rock: comp wins,
-//  if player has scissors and comp has paper: player wins,
-//  if player has rock and comp has scissors: player wins.
-//  ifx player has paper and comp has rock: player wins,
-//  if player has paper and comp scissors: comp wins

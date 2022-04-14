@@ -52,19 +52,20 @@ function playRound(playerSelection, computerSelection) {
 }
 
 // console.log(playRound('rock', computerPlay()));
+if (playerScore === 0 || compScore === 0) {
+  buttons.forEach((btn) =>
+    btn.addEventListener('click', function (e) {
+      resultEl.textContent = '';
 
-buttons.forEach((btn) =>
-  btn.addEventListener('click', function (e) {
-    resultEl.textContent = '';
+      resultEl.textContent = playRound(e.target.textContent, computerPlay());
+      scores[0] = playerScore;
 
-    resultEl.textContent = playRound(e.target.textContent, computerPlay());
-    scores[0] = playerScore;
+      playerScoreEl.textContent = scores[0];
 
-    playerScoreEl.textContent = scores[0];
+      scores[1] = compScore;
 
-    scores[1] = compScore;
-
-    compScoreEl.textContent = scores[1];
-    // console.log(scores);
-  })
-);
+      compScoreEl.textContent = scores[1];
+      // console.log(scores);
+    })
+  );
+}

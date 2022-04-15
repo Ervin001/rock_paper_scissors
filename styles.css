@@ -4,10 +4,25 @@
   box-sizing: border-box;
 }
 
+body {
+  /* height: 100vh; */
+}
+
 .container {
+  /* padding-top: 100px; */
+  background-color: #7e22ce;
+  color: #ede9fe;
+
+  /* width: 700px; */
+  margin: auto 100px;
+  height: 350px;
+  margin-top: 100px;
+  border-radius: 8px;
+
+  display: flex;
+}
+
+.buttons {
   display: flex;
   flex-direction: column;
-
-  margin: auto 100px;
-  background-color: gray;
 }

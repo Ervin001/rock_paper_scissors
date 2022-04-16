@@ -5,24 +5,98 @@
 }
 
 body {
-  /* height: 100vh; */
 }
 
 .container {
-  /* padding-top: 100px; */
-  background-color: #7e22ce;
-  color: #ede9fe;
-
-  /* width: 700px; */
-  margin: auto 100px;
-  height: 350px;
-  margin-top: 100px;
-  border-radius: 8px;
-
   display: flex;
+  flex-direction: column;
+  font-family: 'Cabin', sans-serif;
+
+  justify-content: center;
+  /* align-content: center; */
+  align-items: center;
+}
+
+.game-name {
+  font-size: 70px;
+  margin-top: 75px;
+  margin-bottom: 40px;
+  color: #f03e3e;
+  text-shadow: -3px 3px 5px rgb(103, 103, 103);
+}
+
+.game-info {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  width: 500px;
+  height: 350px;
+
+  background-color: #7950f2;
+  border-radius: 8px;
+  box-shadow: 0 0 12px 1px rgb(103, 103, 103);
+}
+
+.box-1 {
+  display: flex;
+  width: 500px;
+  justify-content: center;
+
+  margin-top: 32px;
+  font-size: 40px;
+  color: #fff5f5;
+}
+
+.box-2 {
+  display: flex;
+  margin-top: 30px;
+  font-size: 30px;
+  width: 500px;
+  color: #fff5f5;
+}
+
+.player-01 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.comp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  flex: 1;
+}
+
+.players {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+}
+
+.num {
+  font-size: 80px;
 }
 
 .buttons {
   display: flex;
-  flex-direction: column;
+  margin-top: 30px;
+  width: 500px;
+  /* display: inline-block; */
+
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  padding: 10px 10px;
+
+  border: none;
+  border-radius: 8px;
+  background-color: #d0bfff;
+  cursor: pointer;
 }

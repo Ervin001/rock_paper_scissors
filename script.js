@@ -1,9 +1,9 @@
 'use strict';
 
 const buttons = document.querySelectorAll('button');
-const resultEl = document.querySelector('.results');
-const playerScoreEl = document.querySelector('.score--player');
-const compScoreEl = document.querySelector('.score--comp');
+const resultEl = document.querySelector('.score');
+const playerScoreEl = document.querySelector('.player-score-number');
+const compScoreEl = document.querySelector('.comp-score-number');
 
 // Array that will let the computerPlay function choose an option
 const typesArr = ['rock', 'paper', 'scissors'];
@@ -52,6 +52,8 @@ function playRound(playerSelection, computerSelection) {
 }
 
 // console.log(playRound('rock', computerPlay()));
+
+console.log(scores);
 if (playerScore === 0 || compScore === 0) {
   buttons.forEach((btn) =>
     btn.addEventListener('click', function (e) {
@@ -65,7 +67,6 @@ if (playerScore === 0 || compScore === 0) {
       scores[1] = compScore;
 
       compScoreEl.textContent = scores[1];
-      // console.log(scores);
     })
   );
 }
